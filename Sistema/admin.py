@@ -1,4 +1,5 @@
 from django.contrib import admin
+from models import Persona, Mascota
 
 # Register your models here.
 class AdminUsuario(admin.ModelAdmin):
