@@ -1,0 +1,25 @@
+
+{% load staticfiles %}
+{% load socialaccount %}
+
+{% block principal %}
+<link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+{% if registro == 1 %}
+  <form class="formu" method="POST">
+      <h1>Registro Usuario</h1>
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Registrar" class="btn-enviar">
+  </form>
+{% else %}
+  {% if actual.is_staff %}
+    <form class="formu" method="POST">
+        <h1>Registro Usuario</h1>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Registrar" class="btn-enviar">
+    </form>
+  {% endif %}
+{% endif %}
+
+{% endblock %}

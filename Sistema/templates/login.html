@@ -1,0 +1,22 @@
+{% extends 'maqueta.html' %}
+{% load staticfiles %}
+
+
+
+{% block principal %}
+<link rel="stylesheet" href="{% static 'css/formulario.css' %}">
+
+<form class="formu" method="POST">
+    
+    <h1>Login Usuario</h1>
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Ingresar" class="btn-enviar">
+    <a href="/olvido/">Quieres recuperar tu password?</a>
+    <p> -- OR -- </p>
+    
+
+
+</form>
+{% endblock %}
