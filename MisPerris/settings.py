@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.facebook',
+    'rest_framework',
 ]
 
 LOCAL_APPS = (
@@ -64,6 +65,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'social_django.middleware.SocialAuthExceptionMiddleware', 
 ]
+
+REST_FRAMEWORK = {
+
+'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+
+'PAGE_SIZE': 10
+
+}
 
 AUTHENTICATION_BACKENDS = [
     'social_core.backends.open_id.OpenIdAuth',
