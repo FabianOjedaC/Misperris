@@ -17,10 +17,12 @@ from social_django.views import auth, complete, disconnect, _do_login
 class UserViewSet(viewsets.ModelViewSet):
     queryset = Persona.objects.all().order_by('nombrePersona')
     serializer_class = PersonaSerializer
+    permission_classes = (IsAdminUser,)
 
 class MascotaViewSet(viewsets.ModelViewSet):
     queryset = Mascota.objects.all().order_by('nombreMascota')
     serializer_class = MascotaSerializer
+    permission_classes = (IsAdminUser,)
 
 
 def index(request):
