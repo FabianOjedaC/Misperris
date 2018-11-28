@@ -4,9 +4,10 @@ Homepage: Maqueta.html
 Superuser: Admin - 123
 http://localhost:8000
 
-Librerias a instalar(pip install): pillow
-                                    django-allauth
-                                    django_facebook
-                                    social-auth-app-django
+Librerias a instalar(pip install): pillow,
+                                    django-allauth,
+                                    django_facebook,
+                                    social-auth-app-django,
+                                    djangorestframework
 
                                     

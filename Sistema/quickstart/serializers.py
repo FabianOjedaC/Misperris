@@ -11,4 +11,4 @@ class PersonaSerializer(serializers.HyperlinkedModelSerializer):
 class MascotaSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Mascota
-        fields = ('nombreMascota', 'estadoMascota' )
+        fields = ('nombreMascota', 'estadoMascota')
